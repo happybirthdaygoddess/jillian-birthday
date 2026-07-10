@@ -1,0 +1,526 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#fff7fa;
+    background-image:
+        linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+    background-size:40px 40px;
+
+    font-family:Arial, sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    animation:fadeIn 1.2s ease;
+    padding:40px 20px;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.title{
+    font-family:"Henny Penny", cursive;
+    font-size:80px;
+    color:#ff6b9d;
+    text-shadow:
+        3px 3px 0 white,
+        6px 6px 15px rgba(0,0,0,.12);
+
+    animation:bounce 3s ease-in-out infinite;
+}
+
+.name{
+    font-family:"Henny Penny", cursive;
+    font-size:48px;
+    color:#ff8db3;
+    margin-top:-8px;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   DATE
+=========================== */
+
+.date{
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#ff9fc4;
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    box-shadow:0 8px 20px rgba(255,120,170,.35);
+}
+
+/* ===========================
+   PROFILE PHOTO
+=========================== */
+
+.profile{
+
+    width:260px;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    object-fit:cover;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.profile:hover{
+
+    transform:scale(1.04);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
+
+    margin-top:30px;
+
+    background:#ff7fb1;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(255,120,170,.35);
+}
+
+button:hover{
+
+    background:#ff5d9a;
+
+    transform:translateY(-4px) scale(1.05);
+}
+
+/* ===========================
+   LETTER POPUP
+=========================== */
+
+#letter{
+
+    display:none;
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:720px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+    z-index:999;
+
+    animation:popup .35s ease;
+}
+
+#letter h2{
+
+    font-family:"Henny Penny", cursive;
+
+    color:#ff7aa8;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+#letter p{
+
+    font-size:20px;
+
+    color:#444;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.gallery img{
+
+    width:170px;
+
+    margin:15px;
+
+    border-radius:20px;
+
+    border:6px solid white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.gallery img:nth-child(1){
+
+    transform:rotate(-8deg);
+
+}
+
+.gallery img:nth-child(2){
+
+    transform:rotate(4deg);
+
+}
+
+.gallery img:nth-child(3){
+
+    transform:rotate(-5deg);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+}
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:55px;
+
+    }
+
+    .name{
+
+        font-size:34px;
+
+    }
+
+    .profile{
+
+        width:190px;
+
+    }
+
+    .date{
+
+        font-size:15px;
+
+    }
+
+    button{
+
+        font-size:17px;
+
+        padding:15px 28px;
+
+    }
+
+    #letter{
+
+        padding:25px;
+
+    }
+
+    #letter h2{
+
+        font-size:32px;
+
+    }
+
+    #letter p{
+
+        font-size:17px;
+
+    }
+
+}
+
+/* ===========================
+   FLOATING BALLOONS
+=========================== */
+
+.balloon{
+    position: fixed;
+    width: 70px;
+    height: 85px;
+    border-radius: 50%;
+    z-index: 5;
+    pointer-events: none;
+    animation: floatBalloon 12s linear infinite;
+}
+.balloon::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:70px;
+
+    background:#888;
+
+    left:50%;
+
+    top:75px;
+}
+
+.balloon1{
+
+    background:#ff9ec7;
+
+    left:8%;
+
+    animation-duration:12s;
+
+}
+
+.balloon2{
+
+    background:#ffc6dd;
+
+    left:25%;
+
+    animation-duration:16s;
+
+}
+
+.balloon3{
+
+    background:#ff82b4;
+
+    left:50%;
+
+    animation-duration:14s;
+
+}
+
+.balloon4{
+
+    background:#ffd6ea;
+
+    left:72%;
+
+    animation-duration:18s;
+
+}
+
+.balloon5{
+
+    background:#ff7aa8;
+
+    left:90%;
+
+    animation-duration:15s;
+
+}
+
+@keyframes floatBalloon{
+
+    from{
+
+        transform:translateY(120vh);
+
+    }
+
+    to{
+
+        transform:translateY(-200px);
+
+    }
+
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.heart{
+    position: fixed;
+    color: #ff7da8;
+    font-size: 28px;
+    z-index: 5;
+    pointer-events: none;
+    animation: floatHeart 8s linear infinite;
+}
+
+.heart1{
+
+    left:12%;
+
+    animation-duration:8s;
+
+}
+
+.heart2{
+
+    left:35%;
+
+    animation-duration:10s;
+
+}
+
+.heart3{
+
+    left:55%;
+
+    animation-duration:9s;
+
+}
+
+.heart4{
+
+    left:78%;
+
+    animation-duration:11s;
+
+}
+
+.heart5{
+
+    left:92%;
+
+    animation-duration:7s;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(110vh) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(-150px) rotate(360deg);
+
+    }
+
+}
