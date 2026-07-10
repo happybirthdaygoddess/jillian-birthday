@@ -12,26 +12,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
 
-    <!-- Your CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="balloon balloon1"></div>
-<div class="balloon balloon2"></div>
-<div class="balloon balloon3"></div>
-<div class="balloon balloon4"></div>
-<div class="balloon balloon5"></div>
+    <!-- Floating Balloons -->
+    <div class="balloon balloon1"></div>
+    <div class="balloon balloon2"></div>
+    <div class="balloon balloon3"></div>
+    <div class="balloon balloon4"></div>
+    <div class="balloon balloon5"></div>
 
-<div class="heart heart1">❤</div>
-<div class="heart heart2">❤</div>
-<div class="heart heart3">❤</div>
-<div class="heart heart4">❤</div>
-<div class="heart heart5">❤</div>
+    <!-- Floating Hearts -->
+    <div class="heart heart1">❤</div>
+    <div class="heart heart2">❤</div>
+    <div class="heart heart3">❤</div>
+    <div class="heart heart4">❤</div>
+    <div class="heart heart5">❤</div>
 
-<body>
-
+    <!-- Title -->
     <h1 class="title">Happy Birthday</h1>
 
     <h2 class="name">Jillian</h2>
@@ -40,14 +41,17 @@
         July 23, 2007
     </div>
 
+    <!-- Profile Picture -->
     <div class="profile-container">
         <img src="images/jillian.jpg" class="profile" alt="Jillian">
     </div>
 
+    <!-- Letter Button -->
     <button id="openLetter">
         💌 Letter ni Cutie
     </button>
 
+    <!-- Gallery -->
     <div class="gallery">
 
         <img src="images/photo1.jpg" alt="Photo 1">
@@ -58,9 +62,10 @@
 
     </div>
 
+    <!-- Letter -->
     <div id="letter">
 
-        <h2>Dear Jillian,</h2>
+        <h2>"Dear Jillian,"</h2>
 
         <p>
             Happy happy birthday bff ko na palagi ako binubullyyy!!<br><br>
@@ -69,7 +74,7 @@
 
             Hindi na para mag long message pa kasi hindi naman ako weirdo HAHAHAHA, pero happy birthday!!!!<br><br>
 
-            Sana friend mo pa rin aq at ka-streak hanggang 90th birthday mo... kaso baka patay na ako non JAJAHAHAHAHAHA.<br><br>
+            Sana friend mo pa rin aq at ka-streak hanggang 90th birthday mo... kaso baka patay na ako non JAJAHAHAHAHAHA<br><br>
 
             Happy Birthday, Jillian!! Enjoy your special day!!
         </p>
@@ -80,10 +85,25 @@
 
     </div>
 
+    <!-- Memory Game Button -->
+    <button onclick="window.location.href='memory.html'">
+        🎀 laro k muna
+    </button>
+
+    <!-- Music Button -->
+    <button id="musicBtn">
+        🔊 Music
+    </button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
 
-<button onclick="window.location.href='memory.html'">
-    🎀 laro k muna
-</button>
+</html>
