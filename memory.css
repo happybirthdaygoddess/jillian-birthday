@@ -361,3 +361,55 @@ button:hover{
     box-shadow:0 10px 25px rgba(0,0,0,.2);
 
 }
+
+#musicBtn{
+
+    display:block;
+
+    margin:20px auto;
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff4f9b;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+#backBtn{
+
+    display:block;
+
+    margin:15px auto 30px;
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ffc8e3;
+
+    color:#ff4f9b;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
