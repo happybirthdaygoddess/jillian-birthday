@@ -25,43 +25,49 @@
         </p>
 
         <!-- Scoreboard -->
-        <div class="stats">
+<!-- Stats -->
+<div class="stats">
 
-            <div class="stat-box">
-                <span class="label">Moves</span>
-                <span id="moves">0</span>
-            </div>
+    <div class="stat-box">
+        <h3>Moves</h3>
+        <span id="moves">0</span>
+    </div>
 
-            <div class="stat-box">
-                <span class="label">Time</span>
-                <span id="timer">00:00</span>
-            </div>
+    <div class="stat-box">
+        <h3>Time</h3>
+        <span id="timer">00:00</span>
+    </div>
 
-            <div class="stat-box">
-                <span class="label">Pairs</span>
-                <span id="pairs">0 / 8</span>
-            </div>
+    <div class="stat-box">
+        <h3>Pairs</h3>
+        <span id="pairs">0 / 8</span>
+    </div>
 
-        </div>
+</div>
 
-        <!-- Game Board -->
-        <div id="gameBoard" class="game-board">
+<!-- Music Button -->
+<button id="musicBtn">
+    🔊 music ulit
+</button>
 
-            <!-- Cards are added automatically by JavaScript -->
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music/memory.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-        </div>
+<!-- Game -->
+<div id="gameBoard" class="game-board"></div>
 
-        <!-- Buttons -->
-        <div class="buttons">
+<!-- Restart -->
+<button id="restartBtn">
+    🔄 Restart
+</button>
 
-            <button id="restartBtn">
-                🔄 Restart
-            </button>
-
-            <button onclick="window.location.href='index.html'">
-                🏠 Back
-            </button>
-
+<!-- Back -->
+<button onclick="window.location.href='index.html'" id="backBtn">
+    🏠 Back
+</button>
         </div>
 
     </div>
@@ -114,11 +120,6 @@
 
 </div>
 
-<audio id="bgMusic" loop>
-    <source src="music/memory.mp3" type="audio/mpeg">
-</audio>
-
-<button id="musicBtn">🔊 ibang music</button>
 
 <script src="memory.js"></script>
 
