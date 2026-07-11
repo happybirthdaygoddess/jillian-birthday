@@ -277,3 +277,48 @@ document.addEventListener("keydown", (event) => {
     }
 
 });
+// ===============================
+// Background Music
+// ===============================
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+// Set volume (15%)
+music.volume = 0.15;
+
+let playing = false;
+
+// Play when user first clicks anywhere
+document.addEventListener("click", () => {
+
+    if (!playing) {
+
+        music.play();
+
+        playing = true;
+
+        musicBtn.textContent = "🔇 Pause Music";
+
+    }
+
+}, { once: true });
+
+// Play/Pause button
+musicBtn.addEventListener("click", () => {
+
+    if (music.paused) {
+
+        music.play();
+
+        musicBtn.textContent = "🔇 Pause Music";
+
+    } else {
+
+        music.pause();
+
+        musicBtn.textContent = "🔊 Play Music";
+
+    }
+
+});

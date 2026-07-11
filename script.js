@@ -1,49 +1,102 @@
-// Letter
+// ===============================
+// Birthday Letter
+// ===============================
+
 const letter = document.getElementById("letter");
+const openLetter = document.getElementById("openLetter");
+const closeLetter = document.getElementById("closeLetter");
 
-document.getElementById("openLetter").onclick = function () {
+openLetter.addEventListener("click", () => {
     letter.style.display = "block";
-};
+});
 
-document.getElementById("closeLetter").onclick = function () {
+closeLetter.addEventListener("click", () => {
     letter.style.display = "none";
-};
+});
 
-// Music
+// ===============================
+// Background Music
+// ===============================
+
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
+// Final background volume (15%)
+const TARGET_VOLUME = 0.15;
+
+music.volume = 0;
+
 let playing = false;
+let fading = false;
 
-// Start music after the first click anywhere on the page
-document.addEventListener(
-    "click",
-    () => {
-        if (!playing) {
-            music.play().then(() => {
+// Smooth fade-in
+function fadeInMusic() {
+
+    if (playing || fading) return;
+
+    fading = true;
+
+    music.volume = 0;
+
+    music.play().then(() => {
+
+        const fade = setInterval(() => {
+
+            if (music.volume < TARGET_VOLUME) {
+
+                music.volume = Math.min(
+                    music.volume + 0.01,
+                    TARGET_VOLUME
+                );
+
+            } else {
+
+                clearInterval(fade);
+
+                fading = false;
+
                 playing = true;
-                musicBtn.textContent = "🔇 Pause Music";
-            }).catch(err => {
-                console.log("Music couldn't start:", err);
-            });
-        }
-    },
-    { once: true }
-);
 
-// Toggle music button
+                musicBtn.textContent = "🔇 Pause Music";
+
+            }
+
+        }, 120);
+
+    }).catch(err => {
+
+        console.log(err);
+
+        fading = false;
+
+    });
+
+}
+
+// Music button
 musicBtn.addEventListener("click", () => {
 
-    if (music.paused) {
+    if (!playing) {
 
-        music.play();
-        musicBtn.textContent = "🔇 Pause Music";
+        fadeInMusic();
 
     } else {
 
         music.pause();
+
+        playing = false;
+
         musicBtn.textContent = "🔊 Play Music";
 
     }
+
+});
+
+// If the music ends (only if loop is removed)
+music.addEventListener("ended", () => {
+
+    playing = false;
+
+    musicBtn.textContent = "🔊 Play Music";
 
 });
