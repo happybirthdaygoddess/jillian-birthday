@@ -1,127 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Match ❤️</title>
-
-    <link rel="stylesheet" href="memory.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wala nang malagay kaya eto nalang game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="memory.css">
 </head>
-
 <body>
 
-    <!-- Floating Hearts -->
-    <div class="hearts"></div>
+<div class="hearts"></div>
 
-    <div class="container">
+<div class="container">
 
-        <h1>🩷 Memory Match 🩷</h1>
+<h1>📖 memory game ni goddess</h1>
+<p class="subtitle">match mo lang sila lahat. self explanatory naman na ata 💖</p>
 
-        <p class="subtitle">
-            Match all our memories to unlock your birthday surprise!
-        </p>
-
-        <!-- Scoreboard -->
-<!-- Stats -->
 <div class="stats">
+  <div class="stat-box">
+    <h3>💖 Moves</h3>
+    <span id="moves">0</span>
+  </div>
 
-    <div class="stat-box">
-        <h3>Moves</h3>
-        <span id="moves">0</span>
-    </div>
+  <div class="stat-box">
+    <h3>⏰ Time</h3>
+    <span id="timer">00:00</span>
+  </div>
 
-    <div class="stat-box">
-        <h3>Time</h3>
-        <span id="timer">00:00</span>
-    </div>
-
-    <div class="stat-box">
-        <h3>Pairs</h3>
-        <span id="pairs">0 / 8</span>
-    </div>
-
+  <div class="stat-box">
+    <h3>📸 Pairs</h3>
+    <span id="pairs">0 / 8</span>
+  </div>
 </div>
 
-<!-- Music Button -->
-<button id="musicBtn">
-    🔊 music ulit
-</button>
+<button id="musicBtn">🎵 Play Music</button>
 
-    <!-- Background Music -->
-    <audio id="bgMusic" loop>
-        <source src="music/memory.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio id="bgMusic" loop>
+    <source src="music/memory.mp3" type="audio/mpeg">
+</audio>
 
-<!-- Game -->
 <div id="gameBoard" class="game-board"></div>
 
-<!-- Restart -->
-<button id="restartBtn">
-    🔄 Restart
-</button>
+<button id="restartBtn">🎀 Restart Game</button>
 
-<!-- Back -->
-<button onclick="window.location.href='index.html'" id="backBtn">
-    🏠 Back
-</button>
-        </div>
-
-    </div>
-
-    <!-- WIN SCREEN -->
-    <div id="winScreen" class="win-screen hidden">
-
-        <div class="win-card">
-
-            <h2>🎉 You Did It! 🎉</h2>
-
-            <p>
-                You matched every memory!
-            </p>
-
-            <h3 id="finalMoves"></h3>
-
-            <h3 id="finalTime"></h3>
-
-            <button id="giftBtn">
-                🎁 Open Birthday Surprise
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- SURPRISE SCREEN -->
-<div id="giftScreen" class="gift-screen hidden">
-
-    <div class="gift-card">
-
-        <h2>🎉 Happy Birthday Goddess! 🎉</h2>
-
-        <img
-            src="images/surprise.jpg"
-            class="surprise-image"
-            alt="Birthday Surprise">
-
-        <p>
-            Dahil natapos mo ung game,
-            This is for u💖
-        </p>
-
-        <button id="closeGift">
-            ❤️ Close
-        </button>
-
-    </div>
+<button id="backBtn" onclick="window.location.href='index.html'">🏠 Back Home</button>
 
 </div>
 
+<div id="winScreen" class="win-screen hidden">
+  <div class="win-card">
+      <h2>🎉 wow congrats</h2>
+      <p>u da real memory queen</p>
+      <h3 id="finalMoves"></h3>
+      <h3 id="finalTime"></h3>
+      <button id="giftBtn">🎁 surprise q sau</button>
+  </div>
+</div>
+
+<div id="giftScreen" class="gift-screen hidden">
+  <div class="gift-card">
+      <h2>🎂 Happy Birthday Jillian! 💖</h2>
+      <img class="surprise-image" src="images/surprise.jpg" alt="Birthday Surprise">
+      <p>Dahil natapos mo ung game, ito na gift ko sayo hehe ❤️
+        
+        (di ko alam ano gusto mo, sabi ka nalang if may want or need kaa)
+      </p>
+      <button id="closeGift">❤️ Close</button>
+  </div>
+</div>
 
 <script src="memory.js"></script>
-
 </body>
 </html>
